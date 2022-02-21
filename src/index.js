@@ -3,12 +3,20 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
 
-// import global style
-// import 'bootstrap-v4-rtl/dist/css/bootstrap-rtl.min.css';
+// global style
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'normalize.css';
-import './Layout/components/Main.scss';
+import './Layout/Main.scss';
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+// redux
+import {Provider} from 'react-redux';
+import store from './Layout/redux/store';
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App/>
+    </Provider>,
+    document.getElementById('root')
+);
 
 reportWebVitals();
