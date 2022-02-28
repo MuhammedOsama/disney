@@ -12,9 +12,15 @@ export default function App() {
         <Navbar/>
         <Router>
             <Switch>
-                <Route exact path='/'><Login/></Route>
-                <Route exact path='/home'><Home/></Route>
-                <Route exact path='/details/:id'><Details/></Route>
+                <Route exact path='/'>
+                    <Login/>
+                </Route>
+                <Route path='/home'>
+                    <Home/>
+                </Route>
+                <Route path='/details/:id'>
+                    <Details/>
+                </Route>
             </Switch>
         </Router>
     </div>

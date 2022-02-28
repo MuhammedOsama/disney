@@ -17,11 +17,9 @@ import db from '../firebase/Config';
 
 // features
 import {setMovies} from '../features/MovieSlice';
-import {selectUserName} from '../features/UserSlice';
 
 export default function Home() {
     const dispatch = useDispatch();
-    const userName = useSelector(selectUserName);
     let recommends = [];
     let newDisney = [];
     let originals = [];
@@ -52,7 +50,7 @@ export default function Home() {
                 trending: trending
             }));
         });
-    }, [userName]);
+    }, []);
 
     return <div id='home'>
         <img className='home-bg' src='./images/home-background.png' alt='Home Background'/>

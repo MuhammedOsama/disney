@@ -16,7 +16,7 @@ export default function Trending() {
         <div className="content">
             {movies && movies.map((movie, key) => <div className="wrap" key={key}>
                     {movie.id}
-                    <Link to={`/detail/` + movie.id}>
+                    <Link to={`/details/` + movie.id}>
                         <img src={movie.cardImg} alt={movie.title}/>
                     </Link>
                 </div>
